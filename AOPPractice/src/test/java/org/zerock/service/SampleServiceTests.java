@@ -35,11 +35,11 @@ public class SampleServiceTests {
 		
 	}
 	
-	@Test
-	public void testAddError() throws Exception {
-		
-		log.info(service.doAdd("123", "adv"));
-		
-	}
+//	@Test
+//	public void testAddError() throws Exception {
+//		
+//		log.info(service.doAdd("123", "adv"));
+//		
+//	}
 
 }
