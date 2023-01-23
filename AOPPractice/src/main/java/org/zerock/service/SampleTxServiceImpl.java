@@ -1,6 +1,7 @@
 package org.zerock.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.zerock.mapper.Sample1Mapper;
 import org.zerock.mapper.Sample2Mapper;
 
@@ -12,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 @AllArgsConstructor
+@Transactional
 public class SampleTxServiceImpl implements SampleTxService{
 	
 	

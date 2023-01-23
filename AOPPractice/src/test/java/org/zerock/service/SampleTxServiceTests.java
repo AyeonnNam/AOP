@@ -23,10 +23,7 @@ public class SampleTxServiceTests {
 	@Test
 	public void testLong() {
 		
-		String str = "Starry\r\n" + 
-					"Starry night\r\n" + 
-					"Paint your palette blue and grey\r\n" + 
-					"Look out on a summer's day";
+		String str = "Starry Starry night. Paint your palette blue and grey Look out on a summer's day";
 		
 		
 		log.info(str.getBytes().length);

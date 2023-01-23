@@ -23,15 +23,15 @@ public class LogAdvice {
 		log.info("===========================");
 	}
 	
-	@Before("execution(* org.zerock.service.SampleService*.doAdd(String,String)) &&args(str1, str2)")
-	public void logBeforeWithParam(String str1, String str2) {
-		log.info("str1:" +str1);
-		log.info("str2:" +str2);
-
-		
-	}
+//	@Before("execution(* org.zerock.service.SampleTxService*.addData(String)) &&args(value)")
+//	public void logBeforeWithParam(String value) {
+//		log.info("str" + value);
+//		
+//
+//		
+//	}
 	
-	@AfterThrowing(pointcut = "execution(* org.zerock.service.SampleService*.*(..))", throwing = "exception")
+	@AfterThrowing(pointcut = "execution(* org.zerock.service.SampleTxService*.*(..))", throwing = "exception")
 	public void logException(Exception exception) {
 		
 		log.info("Exception....!!!!");
@@ -39,7 +39,7 @@ public class LogAdvice {
 		}
 	
 	
-	@Around("execution(* org.zerock.service.SampleService*.*(..))")
+	@Around("execution(* org.zerock.service.SampleTxService*.*(..))")
 	public Object logTime(ProceedingJoinPoint pjp) {
 		
 		long start = System.currentTimeMillis();
